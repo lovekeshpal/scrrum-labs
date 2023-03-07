@@ -9,19 +9,15 @@ import {MatDialog} from "@angular/material/dialog";
 })
 export class AddTransactionsComponent {
 
-  animal: string = "";
-  name: string = "";
+
+
 
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AddDialogComponent, {
-      data: {name: this.name, animal: this.animal},
-    });
+    this.dialog.open(AddDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
 
-    });
   }
 
 }
