@@ -4,6 +4,7 @@ import {FinanceComponent} from "./components/finance/finance.component";
 import {StudiesComponent} from "./components/studies/studies.component";
 
 const routes: Routes = [
+  { path: '', component: FinanceComponent },
   { path: 'finance', component: FinanceComponent },
   { path: 'studies', component: StudiesComponent }
 ];

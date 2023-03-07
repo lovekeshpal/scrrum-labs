@@ -19,6 +19,7 @@ import { AddDialogComponent } from './components/finance/add-transactions/add-di
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatIconModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule
 
 
   ],
