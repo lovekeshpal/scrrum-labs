@@ -9,9 +9,6 @@ import {MatDialog} from "@angular/material/dialog";
 })
 export class AddTransactionsComponent {
 
-
-
-
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {

@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 
 })
 export class HeaderComponent{
+navbarOpen: boolean = false;
 
+toggleNavbar(){
+  this.navbarOpen = !this.navbarOpen;
+}
 }
 
 
