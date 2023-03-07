@@ -12,9 +12,8 @@
           <td>{{transaction.transactionId}}</td>
           <td>{{transaction.date}}</td>
           <td>{{transaction.type}}</td>
-          <td [ngClass]="{debit: transaction.type=='debit'}">{{transaction.amount}}</td>
-
-        </tr>
+          <td [ngClass]="{debit: transaction.type=='debit', credit: transaction.type=='credit'}">{{transaction.amount}}</td>
+          </tr>
 
         </tbody>
       </table>

@@ -1,12 +1,21 @@
 <mat-card-header>
   <mat-toolbar class="toolbar">
-    <mat-card-title>Add Transaction</mat-card-title>
-    <span class="toolbar-spacer"></span>
-    <mat-icon (click)="onNoClick()">cancel</mat-icon>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <mat-card-title>Add Transaction</mat-card-title>
+        </div>
+        <div class="col-md-2">
+
+          <mat-icon class="float-end" (click)="onNoClick()">cancel</mat-icon>
+        </div>
+      </div>
+    </div>
+
   </mat-toolbar>
 </mat-card-header>
 <mat-card-content>
-  <div class="container">
+  <div class="container mt-4">
     <form [formGroup]="transactionForm" (submit)="onSubmit()">
 
       <div class="row">
@@ -59,10 +68,12 @@
 
         </div>
 
-
+        <div class="row">
+          <p>(<span style="color: red">*</span>) Fill all required fields to save.</p>
+        </div>
         <div class="row">
           <div class="col-md-6">
-            <button mat-flat-button color="primary">Save</button>
+            <button type="submit" [disabled]="transactionForm.invalid" mat-flat-button color="primary">Save</button>
           </div>
         </div>
       </div>
