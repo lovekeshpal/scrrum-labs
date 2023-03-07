@@ -3,16 +3,16 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand m-2" href="#">
-      <img src="https://cdn-icons-png.flaticon.com/512/3665/3665997.png" alt="Logo" width="auto" height="30px" class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/8142/8142801.png" alt="Logo" width="auto" height="30px" class="d-inline-block align-text-top">
       Entity
     </a>
     <button (click) = toggleNavbar() class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [ngClass]="{show: navbarOpen}" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <ul class="navbar-nav m-4">
+
+        <ul class="navbar-nav">
           <li class="nav-item" (click) = toggleNavbar()>
             <a class="nav-link" routerLink="/finance" routerLinkActive="active">Finance</a>
           </li>
@@ -20,7 +20,7 @@
             <a class="nav-link" routerLink="/studies" routerLinkActive="active">Studies</a>
           </li>
 
-        </ul>
+
       </ul>
 
     </div>

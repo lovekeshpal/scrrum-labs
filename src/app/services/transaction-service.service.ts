@@ -7,9 +7,9 @@ import {Transaction} from "../components/finance/transactions/transaction.model"
 export class TransactionServiceService {
   transactions: Transaction[] = [
     {remarks:"paid",
-      transactionId: "ebfhwbgefcjkb",
+      transactionId: "TXN1290003651347",
       amount: 252,
-      date: "23/02/2022" ,
+      date: "23/2/2022" ,
       type: "debit"}
   ]
   constructor() { }

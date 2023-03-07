@@ -17,6 +17,10 @@ export class AddDialogComponent implements OnInit{
 
   ) {}
 
+  uniqueID() {
+    return "TXN" + Math.floor(Math.random() * Date.now())
+  }
+
   transactionForm = new FormGroup({
     remarks:  new FormControl('', [Validators.required]),
     transactionId: new FormControl('', [Validators.required]),
@@ -30,7 +34,18 @@ export class AddDialogComponent implements OnInit{
     this.dialogRef.close();
   }
   onSubmit() {
+    this.transactionForm.controls['transactionId'].setValue(this.uniqueID());
+    // @ts-ignore
+    this.transactionForm.controls['date'].setValue(this.transactionForm.controls['date'].value.toLocaleString().split(",",1));
     this.transactionService.setTransaction(this.transactionForm.value);
     this.dialogRef.close();
+  }
+
+  //For allowing user to enter the numbers only
+  numberOnly(event: { which: any; keyCode: any; }): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    return !(charCode > 31 && (charCode < 47 || charCode > 57));
+
+
   }
 }

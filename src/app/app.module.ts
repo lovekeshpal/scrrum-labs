@@ -20,6 +20,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatTableModule} from "@angular/material/table";
+import {MatSelectModule} from "@angular/material/select";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -34,23 +37,26 @@ import {MatTableModule} from "@angular/material/table";
     TransactionsComponent,
     AddDialogComponent
   ],
-  imports: [
+    imports: [
 
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatTableModule
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatTableModule,
+        MatSelectModule,
+      MatDatepickerModule,
+      MatNativeDateModule
 
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
