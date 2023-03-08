@@ -23,7 +23,7 @@ export class AddDialogComponent implements OnInit{
 
   transactionForm = new FormGroup({
     remarks:  new FormControl('', [Validators.required]),
-    transactionId: new FormControl('', [Validators.required]),
+    transactionId: new FormControl(''),
     date: new FormControl('', [Validators.required]),
     type: new FormControl('', [Validators.required]),
     amount: new FormControl('', [Validators.required]),
